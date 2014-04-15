@@ -39,3 +39,16 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+gem 'bootstrap-sass'
+gem 'haml-rails'
+gem 'unicorn'
+gem 'unicorn-rails'
+
+group :development do
+  gem 'html2haml'
+  gem 'hub', :require=>nil
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
+
