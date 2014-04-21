@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  leader_id: 1
-  companion_one_id: 1
-  companion_two_id: 1
+  id:               1
+  name:             Group Test
+  leader_id:        1
+  companion_one_id: 2
+  companion_two_id: 3
 
 two:
-  name: MyString
-  leader_id: 1
+  id:               2
+  name:             Group Two Test
+  leader_id:        2
   companion_one_id: 1
-  companion_two_id: 1
+  companion_two_id: 3
