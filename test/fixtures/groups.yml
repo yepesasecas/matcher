@@ -1,0 +1,13 @@
+one:
+  id:               1
+  name:             Group Test
+  leader_id:        1
+  companion_one_id: 2
+  companion_two_id: 3
+
+two:
+  id:               2
+  name:             Group Test 2
+  leader_id:        2
+  companion_one_id: 1
+  companion_two_id: 3
