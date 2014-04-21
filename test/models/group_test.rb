@@ -24,4 +24,8 @@ class GroupTest < ActiveSupport::TestCase
     group = Group.create name: "prueba", companion_two_id: user.id
     assert_equal user.name, group.companion_two.name, "The companion_two of the group is wrong"
   end
+
+  test "prueba" do 
+    assert true
+  end
 end
