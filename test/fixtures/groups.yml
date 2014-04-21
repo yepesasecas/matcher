@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  leader_id: 1
+  companion_one_id: 1
+  companion_two_id: 1
+
+two:
+  name: MyString
+  leader_id: 1
+  companion_one_id: 1
+  companion_two_id: 1
