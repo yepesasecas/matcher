@@ -14,6 +14,7 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
+gem 'omniauth-facebook'
 group :development do
   gem 'html2haml'
   gem 'hub',                    :require=>nil
