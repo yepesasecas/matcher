@@ -1,5 +1,3 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   id:               1
   name:             Group Test
@@ -9,7 +7,7 @@ one:
 
 two:
   id:               2
-  name:             Group Two Test
+  name:             Group Test 2
   leader_id:        2
   companion_one_id: 1
   companion_two_id: 3

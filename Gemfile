@@ -9,14 +9,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'spring',                    group: :development
 gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'unicorn'
 gem 'unicorn-rails'
 group :development do
   gem 'html2haml'
-  gem 'hub', :require=>nil
+  gem 'hub',                    :require=>nil
   gem 'quiet_assets'
   gem 'rails_layout'
 end
