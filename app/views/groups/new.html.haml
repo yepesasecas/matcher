@@ -1,0 +1,21 @@
+.container
+  .row
+    %h1 New Group
+    =form_for @group do |f|
+      =f.label "Name your Group"
+      =f.text_field :name
+
+  .row
+    %h1 Members
+    .user
+      %p 
+        %b Leader:
+        %span=@group.leader.name if @group.leader
+    .user
+      %p 
+        %b Companion one:
+        %span=@group.companion_one.name if @group.companion_one
+    .user
+      %p 
+        %b Companion two:
+        %span=@group.companion_two.name if @group.companion_two
