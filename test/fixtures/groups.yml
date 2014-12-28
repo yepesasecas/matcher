@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  weekend_value: 1
+  talk_about_value: 1
+  social_status_value: 1
+  meet_value: 1
+
+two:
+  weekend_value: 10
+  talk_about_value: 10
+  social_status_value: 10
+  meet_value: 10
