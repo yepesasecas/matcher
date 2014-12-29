@@ -1,0 +1,51 @@
+<section class="col-sm-6 col-sm-offset-3">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Create Group</h3>
+    </div>
+    <div class="panel-body">
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta maxime vero porro voluptatibus qui ullam iste doloremque minus quae eius iusto omnis quaerat saepe ratione, labore sequi voluptates recusandae, incidunt.
+        </p>
+      </div>
+      <div class="slider">
+        <p>
+          <label for="amount">Tus fines de semana son de:</label>
+          <input type="text" id="weekend-value" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-weekend-value"></div>
+      </div>
+      <div class="slider">
+        <p>
+          <label for="amount">Tus conversaciones son de:</label>
+          <input type="text" id="talk-about-value" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-talk-about-value"></div>
+      </div>
+      <div class="slider">
+        <p>
+          <label for="amount">Te importa el status Social:</label>
+          <input type="text" id="social-status-value" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-social-status-value"></div>
+      </div>
+      <div class="slider">
+        <p>
+          <label for="amount">Buscas:</label>
+          <input type="text" id="meet-value" readonly style="border:0; color:#f6931f; font-weight:bold;">
+        </p>
+        <div id="slider-meet-value"></div>
+      </div>
+      <div class="form">
+        <%= form_for @group do |f|%>
+          <%= f.hidden_field :weekend_value%>
+          <%= f.hidden_field :talk_about_value%>
+          <%= f.hidden_field :social_status_value%>
+          <%= f.hidden_field :meet_value%>
+          <%= f.submit "Sign in with Facebook to create Group", class: "btn btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

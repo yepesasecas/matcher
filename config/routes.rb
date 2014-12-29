@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  resources :groups
+  resources :groups, only: [:index, :show, :new, :create]
 end
