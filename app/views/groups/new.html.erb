@@ -37,13 +37,20 @@
         </p>
         <div id="slider-meet-value"></div>
       </div>
-      <div class="form">
-        <%= form_for @group do |f|%>
-          <%= f.hidden_field :weekend_value%>
-          <%= f.hidden_field :talk_about_value%>
-          <%= f.hidden_field :social_status_value%>
-          <%= f.hidden_field :meet_value%>
-          <%= f.submit "Sign in with Facebook to create Group", class: "btn btn-primary btn-block" %>
+      <div id="user_nav">
+        <% if current_user %>
+          <div class="form">
+            <%= form_for @group do |f|%>
+              <%= f.hidden_field :weekend_value%>
+              <%= f.hidden_field :talk_about_value%>
+              <%= f.hidden_field :social_status_value%>
+              <%= f.hidden_field :meet_value%>
+              <%= f.submit "Create Group", class: "btn btn-primary btn-block" %>
+            <% end %>
+          </div>
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <%= link_to "Sign in with Facebook to Create Group", "/auth/facebook", id: "sign_in", class: "btn btn-primary btn-block"  %>
         <% end %>
       </div>
     </div>

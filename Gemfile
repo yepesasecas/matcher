@@ -18,6 +18,8 @@ gem 'angularjs-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
+gem 'omniauth-facebook'
+
 group :development do
   gem 'spring'
 end

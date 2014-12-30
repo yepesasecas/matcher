@@ -1,4 +1,6 @@
 class Group < ActiveRecord::Base
+  belongs_to :user
+
   validates :weekend_value, presence: true
   validates :talk_about_value, presence: true
   validates :meet_value, presence: true
