@@ -12,7 +12,7 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new group_params
     if @group.save
-      redirect_to @group
+      redirect_to @group, notice: "Group successfully Created"
     else
       puts @group.errors.inspect
       render :new, "Group was not valid to save."
