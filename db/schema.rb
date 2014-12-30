@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230034209) do
+ActiveRecord::Schema.define(version: 20141230182540) do
 
   create_table "groups", force: :cascade do |t|
     t.integer  "weekend_value"
@@ -20,10 +20,17 @@ ActiveRecord::Schema.define(version: 20141230034209) do
     t.integer  "meet_value"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.integer  "user_id"
   end
 
-  add_index "groups", ["user_id"], name: "index_groups_on_user_id"
+  create_table "user_groups", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "user_groups", ["group_id"], name: "index_user_groups_on_group_id"
+  add_index "user_groups", ["user_id"], name: "index_user_groups_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"

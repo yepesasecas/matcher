@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class GroupTest < ActiveSupport::TestCase
-  should belong_to :user
+  should have_many :user_groups
+  should have_many :users
 
   should validate_presence_of :weekend_value
   should validate_presence_of :talk_about_value
