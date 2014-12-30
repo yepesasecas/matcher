@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230182540) do
+ActiveRecord::Schema.define(version: 20141230183403) do
 
   create_table "groups", force: :cascade do |t|
     t.integer  "weekend_value"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20141230182540) do
     t.integer  "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "role"
   end
 
   add_index "user_groups", ["group_id"], name: "index_user_groups_on_group_id"

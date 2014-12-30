@@ -11,8 +11,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new group_params
-    if @group.save
+    if @group = current_user.groups.create(group_params)
+      current_user.user_groups.where(group: @group).first.update(role: UserGroup::OWNER)
       redirect_to @group, notice: "Group successfully Created"
     else
       puts @group.errors.inspect
