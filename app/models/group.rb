@@ -44,6 +44,10 @@ class Group < ActiveRecord::Base
     nearest
   end
 
+  def owner
+    user_groups.where(role: UserGroup::OWNER).first.user
+  end
+
   private
     def pitagoras(node_a_coordinates, node_b_coordinates)
       sum   = 0
