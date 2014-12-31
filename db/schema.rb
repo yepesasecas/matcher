@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141230183403) do
+ActiveRecord::Schema.define(version: 20141231170621) do
 
   create_table "groups", force: :cascade do |t|
     t.integer  "weekend_value"
@@ -20,7 +20,10 @@ ActiveRecord::Schema.define(version: 20141230183403) do
     t.integer  "meet_value"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.string   "invitation_token"
   end
+
+  add_index "groups", ["invitation_token"], name: "index_groups_on_invitation_token"
 
   create_table "user_groups", force: :cascade do |t|
     t.integer  "user_id"

@@ -20,6 +20,8 @@ gem 'autoprefixer-rails'
 
 gem 'omniauth-facebook'
 
+gem 'uuid', '~> 2.3.7'
+
 group :development do
   gem 'spring'
 end

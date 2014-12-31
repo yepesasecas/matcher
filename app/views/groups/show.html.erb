@@ -1,14 +1,18 @@
 <section class="groups col-sm-6 col-sm-offset-3">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Group (Step 2/3)</h3>
+      <h3 class="panel-title">Group (Step 2 of 3)</h3>
     </div>
     <div class="panel-body">
       <div class="description">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta maxime vero porro voluptatibus qui ullam iste doloremque minus quae eius iusto omnis quaerat saepe ratione, labore sequi voluptates recusandae, incidunt.
+          Comparte el link con tus amigos que quieres te acompañen. Cuando tus dos amigos se unan empezaremos con la busqueda de otro grupo de amigos.
         </p>
+        <div class="link">
+          <%= link_to invitation_url(id: @group.invitation_token), invitation_url(id: @group.invitation_token)%>
+        </div>
       </div>
+      <hr>
       <div class="members">
         <div class="member">
           <div class="media">
@@ -29,8 +33,8 @@
               <%=image_tag "users/profile.jpeg"%>
             </a>
             <div class="media-body media-middle">
-              <h4 class="media-heading">Agrega</h4>
-              ...
+              <h4 class="media-heading">Esperando amigo 1</h4>
+              Comparte el link con tus amigos para que se unan.
             </div>
           </div>
         </div>
@@ -42,8 +46,8 @@
               <%=image_tag "users/profile.jpeg"%>
             </a>
             <div class="media-body media-middle">
-              <h4 class="media-heading">Media heading</h4>
-              ...
+              <h4 class="media-heading">Esperando Amigo 2</h4>
+              Comparte el link con tus amigos para que se unan.
             </div>
           </div>
         </div>
