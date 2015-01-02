@@ -17,10 +17,11 @@ class Group < ActiveRecord::Base
   validates :social_status_value, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 10}
 
   def add_user(user)
-    return false if users.ids.include?(user.id)
-    return false if users.count >= 3
-
-    self.users << user
+    if valid_user? user
+      self.users << user
+    else
+      false
+    end
   end
 
   def coordinates
@@ -32,10 +33,23 @@ class Group < ActiveRecord::Base
   end
 
   def owner
-    user_groups.where(role: UserGroup::OWNER).first.user
+    owner = user_groups.owner.first
+    if owner
+      owner.user
+    else
+      nil
+    end
+  end
+
+  def owner=(user)
+    user.user_groups.where(group: self).first.set_as_owner
   end
 
   private
+    def valid_user?(user)
+      !(users.include?(user) || users.count >= 3)
+    end
+
     def generate_invitation_token
       self.invitation_token = UUID.new.generate
     end

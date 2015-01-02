@@ -20,7 +20,7 @@ class GroupTest < ActiveSupport::TestCase
     @user  = User.first
     @group = @user.groups.create(weekend_value: 1, talk_about_value: 1, meet_value: 1, social_status_value: 1)
 
-    @group.user_groups.where(group: @group).first.update(role: UserGroup::OWNER)
+    @group.owner = @user
   end
 
   test "group owner" do
