@@ -13,10 +13,10 @@ class GroupsController < ApplicationController
   def create
     if @group = current_user.groups.create(group_params)
       @group.owner = current_user
-      redirect_to @group, notice: "Group successfully Created"
+      redirect_to @group, flash: {success: "Group successfully Created"}
     else
       puts @group.errors.inspect
-      render :new, "Group was not valid to save."
+      render :new, "Group was not valid. Please try again."
     end
   end
 

@@ -8,6 +8,9 @@
   </head>
   <body>
     <div class="container">
+      <%= render "alerts/container", flash: flash%>
+    </div>
+    <div class="container">
       <%= yield %>
     </div>
   </body>
